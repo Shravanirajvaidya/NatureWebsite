@@ -1,0 +1,166 @@
+<html>
+<head>
+
+<title>Contact us</title>
+<link href="./css/bootstrap.min.css" rel="stylesheet"/>
+<link href="homepage.css" rel="stylesheet"/>
+<script src="./js/bootstrap.bundle.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="row NavBar">
+<div class="col-sm-12">
+<nav class=" navbar navbar-expand-lg " style="background-color:2f2838;">
+<div class="container-fluid">
+<div class="Collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item">
+
+<img src="logo.jpg" alt="logo not found" height="45px" width="75px"/>
+</li>
+
+<li class="nav-item">
+<a href="homepage.html" class="nav-link active text-white" aria-current="page">Home</a>
+</li>
+
+<li class="nav-item">
+<a href="About us.html" class="nav-link active text-white">About</a>
+</li>
+
+<li class="nav-item">
+<a href="contact us.html" class="nav-link active text-white">Contact us</a>
+</li>
+</ul>
+<form  class="d-flex" role="search">
+<input type="search" class="form-control me-2 " placeholder="search" aria-label="Search">
+<button type="submit" class="btn btn-outline-info  ">Search </button>
+</form>
+</div></div>
+</nav>
+</div>
+</div>
+<div class="row sec text-white">
+<div class="col-sm-12 sec-inner pt-3">
+<h6> Nature always try to bring HAPPINESS in everyone's life!</h6>
+<h1 class="text-center pt-5 my-5"><b>Contact Us</h1></b>
+</div>
+</div>
+
+
+<div class="container my-5">
+<div class="row">
+<div class="col-sm-4 my-sec text-white p-0">
+<div class="my-sec-inner text-center h-100 pt-4">
+<h5><a href="tel:7057741995" style="text-decoration:none" class="text-white"><i class="fa-solid fa-phone fa-spin"></i>   Call Us: +91 7057741995</a></h5>
+<h6><a href="mailto:shravanianilrajvaidya@gmail.com" style="text-decoration:none" class="text-white">E-mail : shravanianilrajvaidya@gmail.com</a></h6>
+<ul class="smi">
+<li><a href="https://www.linkedin.com/in/shravani-rajvaidya-b3b322264"><i class="fa-brands fa-linkedin"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+
+</ul>
+</div>
+</div>
+<div class="col-sm-8">
+<form action="#">
+<div class="row mb-4">
+<div class="col-sm-6">
+<input type="text" placeholder="Enter your name" class="form-control" Required />
+</div>
+<div class="col-sm-6">
+<input type="number" placeholder="Enter Mobile No" class="form-control" Required />
+</div>
+</div>
+<div class="row mb-4">
+<div class="col-sm-6">
+<input type="E-mail" placeholder="Enter your E-mail" class="form-control"/>
+</div>
+<div class="col-sm-6">
+<input type="text" placeholder="Subject" class="form-control"/>
+</div>
+</div>
+<div class="row mb-4">
+<div class="col-sm-12">
+<textarea type="text" placeholder="Enter your message" class="form-control"></textarea>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-4">
+<input type="submit" value="Send message" class="btn btn-primary"/>
+</div>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+
+ 
+<div id="chatButton" onclick="toggleChat()" style="position: fixed; bottom: 20px; right: 20px; background-color: #007bff; color: white; padding: 10px 15px; border-radius: 30px; cursor: pointer; z-index: 1000;">
+    💬 Chat
+</div>
+
+
+<div id="chatPopup" style="display: none; position: fixed; bottom: 70px; right: 20px; width: 300px; max-height: 400px; background-color: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 1000; overflow: hidden;">
+    <div style="background-color: #007bff; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <span>Chat With Us</span>
+        <button onclick="toggleChat()" style="background: none; border: none; color: white; font-size: 16px; cursor: pointer;">❌</button>
+    </div>
+    <div id="chatMessages" style="padding: 10px; height: 250px; overflow-y: auto; font-size: 14px;">
+        <p><b>Bot:</b> Hello! How can I help you?</p>
+    </div>
+    <div style="padding: 10px; border-top: 1px solid #ddd; display: flex; gap: 5px;">
+        <input type="text" id="chatInput" placeholder="Type your message..." style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+        <button onclick="sendMessage()" style="background-color: #007bff; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer;">Send</button>
+    </div>
+</div>
+
+<script>
+function toggleChat() {
+    const popup = document.getElementById("chatPopup");
+    popup.style.display = popup.style.display === "block" ? "none" : "block";
+}
+
+function sendMessage() {
+    const input = document.getElementById("chatInput");
+    const message = input.value.trim();
+    if (message !== "") {
+        const chatBox = document.getElementById("chatMessages");
+        const newMessage = document.createElement("p");
+        newMessage.innerHTML = `<b>You:</b> ${message}`;
+        chatBox.appendChild(newMessage);
+        input.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+}
+</script> 
+
+
+
+<div class="row">
+<div class="col-sm-12 p-0">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.3651453606885!2d77.010473674487!3d20.695391899146593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd731aac8c843bb%3A0x9a2cb8996af0d90e!2sKITS%20Tech%20Learning%20Center!5e0!3m2!1sen!2sin!4v1745929599592!5m2!1sen!2sin" width="100%" height="350px" style="border:2px dashed skyblue;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-12 bg-dark py-4 text-white text-center">
+<h2>Nature Page</h2>
+<h6>Details about Nature</h6>
+<h6>Privacy Policy</h6>
+<h6>Terms of Services</h6>
+<p class="pt-3">&copy; 2025 Designed & Developed by <a href="https://www.linkedin.com/in/shravani-rajvaidya-b3b322264" class="text-info" style="text-decoration:none;">Shravani A Rajvaidya</a></p>
+</div>
+</div>
+
+</div>
+</body>

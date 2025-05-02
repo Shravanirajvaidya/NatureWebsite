@@ -1,0 +1,56 @@
+.my-sec
+{
+	height:200px;
+	background-image:url('img8.Jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.my-sec-inner
+{
+	
+	background-color:rgba(5,0,200,0.5);
+		
+}
+.sec
+{
+	height:300px;
+	background-image:url('img11.JFIF');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.sec-inner
+{
+	
+	background-color:rgba(0,0,0,0.8);
+		
+}
+.smi
+{
+	list-style-type:none;
+	
+}
+
+.smi li
+{
+	display:inline-block;
+    background-color:white;
+    color:red;
+    padding:5px 10px;
+	margin-right:10px;
+	border-radius:50px;
+	
+}
+
+.smi li a
+{
+	color:red;
+	
+}
+
+
+
+
+
+
